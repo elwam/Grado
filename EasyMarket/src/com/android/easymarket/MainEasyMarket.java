@@ -45,8 +45,8 @@ public class MainEasyMarket extends Activity implements OnClickListener {
 
 	public void onActivityResult(int requestCode, int resultCode, Intent intent) {
 		if (requestCode == 0) {
-			if (resultCode == Activity.RESULT_OK) {
-				String contents = intent.getStringExtra("SCAN_RESULT");
+			if (resultCode == 1) {
+				String contents = intent.getStringExtra("RESULT");
 				String formatName = intent.getStringExtra("SCAN_RESULT_FORMAT");
 				tvResultado.setText(contents + "\n\n" + formatName);
 			} else if (resultCode == Activity.RESULT_CANCELED) {
